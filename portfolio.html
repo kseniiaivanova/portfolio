@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css
+    "
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="portfolio.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-light mx-2 my-3">
+      <section class="container-fluid">
+        <img class="face" src="assets/face.png" alt="face" />
+        <a class="navbar-brand px-3" href="#">Ksenia Ivanova</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarTogglerDemo02"
+          aria-controls="navbarTogglerDemo02"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <article class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </article>
+      </section>
+    </nav>
+    <main>
+      <article class="hello px-3">
+        <h1>Hi, I'm <span class="move">Ksenia</span></h1>
+
+        <aside class="intro">
+          <h4>
+            Frontend-developer, building the Frontend of Websites and Web
+            Applications
+          </h4>
+        </aside>
+        <button class="contactbtn mt-5">Contact</button>
+      </article>
+
+      <section id="about" class="about px-3">
+        <article class="imgcont">
+          <img class="picture" src="assets/face.png" alt="Ksenia" />
+        </article>
+        <h2 class="mt-5">About me</h2>
+        <aside class="desc">
+          <p>
+            I am a developer with a passion for design and art, always trying to
+            think out of the box.
+          </p>
+        </aside>
+      </section>
+      <article class="factum px-5 py-5 mt-3">
+        <aside class="know">
+          <h3>Experience</h3>
+          <p>
+            I am a student at Medieinstitutet in Stockholm with a background in
+            digital marketing and content management. I have been working for a
+            communications agency for several years.
+          </p>
+        </aside>
+        <aside class="skills">
+          <h3>My skills</h3>
+
+          <ul>
+            <li class="mb-2">
+              <span class="yel"> HTML</span>
+            </li>
+            <li class="mb-2">
+              <span class="yel">CSS</span>
+            </li>
+            <li class="mb-2"><span class="yel">JS</span></li>
+            <li class="mb-2"><span class="yel">GIT</span></li>
+            <li class="mb2"><span class="yel">BOOTSTRAP</span></li>
+          </ul>
+        </aside>
+      </article>
+      <section id="contact" class="contact pt-5">
+        <h2>Contact</h2>
+        <form>
+        <article class="mb-1">
+          <label for="NameInput1" class="form-label">Name</label>
+          <input
+            type="email"
+            class="form-control"
+            id="NameInput1"
+            placeholder="Enter your name"
+          />
+        </article>
+        <article class="mb-1">
+          <label for="EmailInput1" class="form-label">Email address</label>
+          <input
+            type="email"
+            class="form-control"
+            id="EmailInput1"
+            placeholder="name@example.com"
+          />
+        </article>
+        <form>
+        <article class="mb-2">
+          <label for="MessageTextarea1" class="form-label">Your Message</label>
+          <textarea
+            class="form-control"
+            id="MessageTextarea1"
+            rows="3"
+            placeholder="Write something here"
+          ></textarea>
+        </article>
+        <article class="mb-3">
+          <input class="btn btn-warning mx-5 mb-5" type="submit" value="Submit" />
+        </article>
+      </section>
+    </form>
+    </main>
+    <footer>
+      <section class="footcont px-4 py-5">
+        <aside class="social py-4">
+          <h2>Social</h2>
+          <i class="bi bi-github"></i>
+          <i class="bi bi-linkedin px-3"></i>
+        </aside>
+        <aside class="person mb-3">
+          <h2>Ksenia Ivanova</h2>
+          <h6>Frontend developer based in Stockholm</h6>
+        </aside>
+      </section>
+      <section class="copy py-3">
+        <h6>All rights reserved@2022</h6>
+      </section>
+    </footer>
+  </body>
+</html>

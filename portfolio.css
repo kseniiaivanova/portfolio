@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=Titillium+Web:wght@700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Titillium Web', sans-serif;
+   
+}
+
+
+.head {
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    height: 40%;
+    padding: 1em;
+
+}
+
+
+
+.hello {
+    background-color: #2FF3E0;
+
+    
+}
+
+nav a, h2 {
+    text-transform: uppercase;
+}
+
+ul .navbar-nav me-auto {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 2em;
+    flex-wrap: nowrap; 
+}
+
+
+.logo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+.face {
+    border-radius: 50%;
+    width: 3em;
+   
+}
+
+.hero {
+    width: 100vw;
+    height: 60vh;
+
+    
+}
+
+.hello {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: 100vw;
+    height: 100vh;
+    
+  
+}
+
+
+
+article h1 {
+    text-transform: uppercase;
+    font-size: 4em;
+    font-weight: 700;
+    color: #FA26A0;
+    
+}
+
+
+
+
+h1 {
+    overflow: hidden; 
+    border-right: .15em solid orange; 
+    margin: 0 auto; 
+    letter-spacing: .05em; 
+    margin-bottom: 0.5em;
+    
+    animation: 
+    typing 2.5s steps(80, end),
+    blink-caret .75s step-end infinite;
+}
+  
+  
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 40vw }
+  }
+  
+  
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #F8D210; }
+  }
+
+
+  
+#about {
+    background-color: #2FF3E0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    width: 100vw;
+    height: 100vh;
+    
+
+}
+
+  
+.contact {
+    background-color: #2FF3E0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    width: 100vw;
+    height: 50vh;
+
+}  
+
+
+.imgcont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+  
+.picture {
+    width: 40%;
+    border-radius: 50%;
+    border: 0.3em dotted #FA26A0 ;
+}
+
+
+
+.contactbtn {
+    color:black;
+    background-color: #F8D210;
+    font-size: large;
+    padding: 1em;
+   
+   
+
+    
+}
+
+.factum {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    gap: 3em;
+    
+    
+
+}  
+
+li {
+    list-style: none;
+    
+}
+
+.yel {
+    background-color: #F8D210;
+    
+}
+
+.know {
+    flex: 2;
+    width: 100%;
+}
+
+.skills {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+   
+    flex: 1;
+    width: 100%;
+}
+  
+
+
+footer {
+    background-color: #FA26A0;
+    
+}
+
+.footcont {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 0.1em solid rgba(0, 0, 0, 0.3);
+    
+}
+
+
+
+.social i {
+    font-size: 2em;
+    
+}
+
+
+
+.copy {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.copy h6 {
+    font-style: italic;
+}
+
+
+
+
+@media screen and (min-width: 768px) {
+
+    .factum, .footcont  {
+        flex-direction: row;
+                 
+               
+               
+       }
+               
+       .know, .skills {
+        width: 50%;
+       }
+       
+       
+           
+       h1 {
+       overflow: hidden; 
+       border-right: .15em solid orange; 
+       margin: 0 auto; 
+       letter-spacing: .05em; 
+       margin-bottom: 0.5em;
+       white-space: nowrap; 
+       animation: 
+       typing 2.5s steps(80, end), blink-caret .75s step-end infinite;
+       }
+       
+         
+       }
