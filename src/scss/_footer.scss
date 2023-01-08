@@ -1,0 +1,42 @@
+@use "mixins";
+@use "variables" as var;
+
+footer {
+    background-color: var.$secondarycolor; 
+    
+
+
+.footcont {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 0.1em solid rgba(0, 0, 0, 0.3);
+    
+    @include mixins.desctop {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+
+
+.social i {
+    font-size: 2em;
+    color: var.$primarycolor;
+}
+
+
+
+.copy {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.copy h6 {
+    font-style: italic;
+}
+
+};

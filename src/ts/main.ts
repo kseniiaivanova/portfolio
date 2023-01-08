@@ -11,9 +11,10 @@ function createHTML(repos: IRepo[]) {
   let chosenRepos: IRepo[] = [];
   for (let i: number = 0; i < repos.length; i++) {
     if (
-      repos[i].name == "fardig-design" ||
-      repos[i].name == "todo" ||
-      repos[i].name == "seasons"
+      repos[i].name == "ReadyDesign" ||
+      repos[i].name == "To-do-list" ||
+      repos[i].name == "HolidayTree" ||
+      repos[i].name == "memory-game"
     ) {
       chosenRepos.push(repos[i]);
     }
@@ -32,17 +33,12 @@ function createHTML(repos: IRepo[]) {
     projLink.href = chosenRepos[i].html_url;
     projLink.target = "_blank";
 
-    bullProj.innerHTML = chosenRepos[i].name + " ";
+    bullProj.innerHTML = chosenRepos[i].description + ": ";
     bullProj.className = "item__proj";
-    projLink.innerHTML = "Github link";
+    projLink.innerHTML = chosenRepos[i].name + " ";
     projLink.className = "link__proj";
 
     listProj.appendChild(bullProj);
     bullProj.appendChild(projLink);
   }
 }
-
-
-
-
-
