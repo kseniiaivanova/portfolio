@@ -13,12 +13,26 @@
 }
 
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Titillium Web', sans-serif;
     color: var.$primarycolor;
    
 }
 
+.navbar {
+   
+   
+    
+        position: fixed;
+        top: 0;
+        width: 100%;
+    
+
+}
 
 .head {
     display: flex;
@@ -80,21 +94,14 @@ ul .navbar-nav me-auto {
 }
 
 
+h1 {
 
-article h1 {
     text-transform: uppercase;
     font-size: 4em;
     font-weight: 700;
-    color: #FA26A0;
-    
-}
-
-
-
-
-h1 {
+    color: var.$secondarycolor;
     overflow: hidden; 
-    border-right: .15em solid orange; 
+    border-right: .15em solid var.$tertiarycolor; 
     margin: 0 auto; 
     letter-spacing: .05em; 
     margin-bottom: 0.5em;
@@ -102,6 +109,18 @@ h1 {
     animation: 
     typing 2.5s steps(80, end),
     blink-caret .75s step-end infinite;
+
+    
+    @include mixins.desctop {
+        overflow: hidden; 
+        border-right: .15em solid var.$tertiarycolor; 
+        margin: 0 auto; 
+        letter-spacing: .05em; 
+        margin-bottom: 0.5em;
+        white-space: nowrap; 
+        animation: 
+        typing 2.5s steps(80, end), blink-caret .75s step-end infinite;
+    }
 }
   
   
@@ -113,7 +132,7 @@ h1 {
   
   @keyframes blink-caret {
     from, to { border-color: transparent }
-    50% { border-color: #F8D210; }
+    50% { border-color: var.$tertiarycolor; }
   }
 
 
@@ -155,93 +174,94 @@ h1 {
 .picture {
     width: 40%;
     border-radius: 50%;
-    border: 0.3em dotted #FA26A0 ;
+    border: 0.3em dotted var.$secondarycolor;
 }
 
 
 
 .contactbtn {
-    color:black;
-    background-color: #F8D210;
+    @include mixins.buttons;
     font-size: large;
     padding: 1em;
+}
    
    
 
     
-}
+
+.projects {
+        list-style-type: disc;
+      }
+        
+      .link__proj {
+          text-decoration: none;
+          color: var.$secondarycolor;
+          
+      }
+      
+
 
 .factum {
     display: flex;
     justify-content: space-around;
     flex-direction: column;
     gap: 3em;
-    
-    
 
-}  
-
-li {
-    list-style: none;
-    
-}
-
-.yel {
-    background-color: #F8D210;
-    
-}
-
-.know {
-    flex: 2;
-    width: 100%;
-}
-
-.skills {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-   
-    flex: 1;
-    width: 100%;
-}
-
-
-  
-.link__proj {
-    text-decoration: none;
-    color: #FA26A0;
-}
-
-
-
-
-
-@media screen and (min-width: 768px) {
-
-    .factum  {
+    @include mixins.desctop {
         flex-direction: row;
 
-                 
-               
-               
-       }
-               
-       .know, .skills {
-        width: 50%;
-       }
+    } 
+    
+
+    li {
+        list-style: none;
+        
+    }
+    
+    .yel {
+        background-color: var.$tertiarycolor;
+        
+    }
+    
+    .know {
+        flex: 2;
+        width: 100%;
+        @include mixins.desctop {
+            width: 50%;
+
+        }
+    }
+    
+    .skills {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+       
+        flex: 1;
+        width: 100%;
+        @include mixins.desctop {
+            width: 50%;
+
+        }
+    }
+    
+   
+
+};
+
+
+
+
+
+
+
+
+
+
+
+
+    
        
        
            
-       h1 {
-       overflow: hidden; 
-       border-right: .15em solid orange; 
-       margin: 0 auto; 
-       letter-spacing: .05em; 
-       margin-bottom: 0.5em;
-       white-space: nowrap; 
-       animation: 
-       typing 2.5s steps(80, end), blink-caret .75s step-end infinite;
-       }
-       
-         
-       }
+ 

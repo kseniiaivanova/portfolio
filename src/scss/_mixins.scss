@@ -1,7 +1,7 @@
 @use "variables" as var;
 
 @mixin desctop {
-    @media screen and (min-width: 1100px) {
+    @media screen and (min-width: 768px) {
       @content;
     }
   }
