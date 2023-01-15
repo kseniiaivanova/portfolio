@@ -10,6 +10,11 @@
 @mixin buttons {
     color: var.$primarycolor; 
     background-color: var.$tertiarycolor;
+    box-shadow: -6px 6px 0 rgb(0, 128, 70);
+    &:hover {
+      background-color: rgb(253, 124, 25);
+    }
+   
     
 }
   
