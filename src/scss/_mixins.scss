@@ -10,9 +10,14 @@
 @mixin buttons {
     color: var.$primarycolor; 
     background-color: var.$tertiarycolor;
-    box-shadow: -6px 6px 0 rgb(0, 128, 70);
+    box-shadow: -5px 5px 0 rgb(0, 128, 70);
+    text-decoration: none;
+    border: 1px solid var.$primarycolor;
+    
+
     &:hover {
       background-color: rgb(253, 124, 25);
+      color: var.$primarycolor;
     }
    
     

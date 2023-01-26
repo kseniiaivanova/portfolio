@@ -14,7 +14,8 @@ function createHTML(repos: IRepo[]) {
       repos[i].name == "ReadyDesign" ||
       repos[i].name == "To-do-list" ||
       repos[i].name == "HolidayTree" ||
-      repos[i].name == "memory-game"
+      repos[i].name == "memory-game" ||
+      repos[i].name == "Dice-Game"
     ) {
       chosenRepos.push(repos[i]);
     }
