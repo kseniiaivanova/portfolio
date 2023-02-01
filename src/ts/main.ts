@@ -11,7 +11,6 @@ function createHTML(repos: IRepo[]) {
   let chosenRepos: IRepo[] = [];
   for (let i: number = 0; i < repos.length; i++) {
     if (
-      repos[i].name == "ReadyDesign" ||
       repos[i].name == "To-do-list" ||
       repos[i].name == "HolidayTree" ||
       repos[i].name == "memory-game" ||
@@ -22,24 +21,35 @@ function createHTML(repos: IRepo[]) {
   }
 
   for (let i: number = 0; i < chosenRepos.length; i++) {
-    let listProj: HTMLUListElement = document.createElement("ul");
-    listProj.className = "projects";
-    let aside: HTMLDivElement = document.getElementById(
-      "proj"
+    let projCont: HTMLDivElement = document.getElementById(
+      "projects"
     ) as HTMLDivElement;
-    aside.appendChild(listProj);
 
-    let bullProj: HTMLLIElement = document.createElement("li");
+    let project: HTMLDivElement = document.createElement("div");
+    project.classList.add("project");
+
+    let projectDesc: HTMLParagraphElement = document.createElement("p");
+
+    let projectImage: HTMLImageElement = document.createElement("img");
+    projectImage.classList.add("screenshot");
+    projectImage.setAttribute(
+      "src",
+      "https://www.dropbox.com/s/5avrkgqypp05oqb/54455454.jpg?raw=1"
+    );
+
     let projLink: HTMLAnchorElement = document.createElement("a");
     projLink.href = chosenRepos[i].html_url;
     projLink.target = "_blank";
 
-    bullProj.innerHTML = chosenRepos[i].description + ": ";
-    bullProj.className = "item__proj";
-    projLink.innerHTML = chosenRepos[i].name + " ";
+    projectDesc.innerHTML = chosenRepos[i].description;
+    //bullProj.className = "item__proj";
+    //projLink.innerHTML = chosenRepos[i].name + " ";
+    projLink.innerHTML = "GitHub";
     projLink.className = "link__proj";
 
-    listProj.appendChild(bullProj);
-    bullProj.appendChild(projLink);
+    project.appendChild(projectImage);
+    project.appendChild(projectDesc);
+    project.appendChild(projLink);
+    projCont.appendChild(project);
   }
 }

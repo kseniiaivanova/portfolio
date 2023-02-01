@@ -71,12 +71,7 @@ ul .navbar-nav me-auto {
    
 }
 
-/* .hero {
-    width: 100%;
-    height: 60vh;
 
-    
-} */
 
 .hello {
     display: flex;
@@ -187,19 +182,70 @@ h1 {
 }
    
    
+.prwrapp {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
+  
+
+
+
+
+    
+}
     
 
 .projects {
-        list-style-type: disc;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        
+        @include mixins.desctop {
+            flex-direction: row;
+            justify-content: space-around;
+    
+
+
+
+        } 
+
+        
+      }
+
+      .screenshot {
+
+        width: 15em;
+        height: 15em;
+    
       }
         
       .link__proj {
           text-decoration: none;
           color: var.$secondarycolor;
+
+          
           
       }
       
+
+      .project {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+      }
+
+
+      .desc {
+        width: 15em;
+        background-color: chartreuse;
+      }
 
 
 .factum {
@@ -236,9 +282,10 @@ h1 {
     .skills {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: center;
+        align-items: center;
        
-        flex: 1;
+        flex: 2;
         width: 100%;
         @include mixins.desctop {
             width: 50%;
@@ -246,6 +293,7 @@ h1 {
         }
     }
     
+  
    
 
 };
