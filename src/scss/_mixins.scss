@@ -8,18 +8,31 @@
   
 
 @mixin buttons {
-    color: var.$primarycolor; 
-    background-color: var.$tertiarycolor;
-    box-shadow: -5px 5px 0 rgb(0, 128, 70);
-    text-decoration: none;
-    border: 1px solid var.$primarycolor;
-    
-
-    &:hover {
-      background-color: rgb(253, 124, 25);
-      color: var.$primarycolor;
-    }
    
     
-}
-  
+
+    text-decoration: none;
+      color: var.$primarycolor; 
+      outline:0; 
+      font-size:1em;
+      font-weight:600;
+      background: var.$tertiarycolor;
+      
+      padding:2em 4em;
+      //transition:all .3s ease-out; 
+      box-shadow:inset 0 -8px 0 0 rgba(0,0,0,.2);
+      border-radius: 8px;
+       
+    
+    &:hover{
+      background-color: rgb(253, 124, 25);
+      color:#222;;
+    }
+    &:active{
+      color:#222;
+      box-shadow:inset 0 -4px 0 0 rgba(0,0,0,.2);
+       
+    }
+
+
+  }

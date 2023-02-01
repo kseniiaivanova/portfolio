@@ -29,13 +29,14 @@ function createHTML(repos: IRepo[]) {
     project.classList.add("project");
 
     let projectDesc: HTMLParagraphElement = document.createElement("p");
+    projectDesc.classList.add("desc");
 
-    let projectImage: HTMLImageElement = document.createElement("img");
+    /*   let projectImage: HTMLImageElement = document.createElement("img");
     projectImage.classList.add("screenshot");
     projectImage.setAttribute(
       "src",
       "https://www.dropbox.com/s/5avrkgqypp05oqb/54455454.jpg?raw=1"
-    );
+    ); */
 
     let projLink: HTMLAnchorElement = document.createElement("a");
     projLink.href = chosenRepos[i].html_url;
@@ -46,8 +47,8 @@ function createHTML(repos: IRepo[]) {
     //projLink.innerHTML = chosenRepos[i].name + " ";
     projLink.innerHTML = "GitHub";
     projLink.className = "link__proj";
-
-    project.appendChild(projectImage);
+    /* 
+    project.appendChild(projectImage); */
     project.appendChild(projectDesc);
     project.appendChild(projLink);
     projCont.appendChild(project);

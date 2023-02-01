@@ -187,13 +187,30 @@ h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+    background-color: #2FF3E0;
   
 
 
 
 
     
+}
+
+.images {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #2FF3E0;
+    @include mixins.desctop {
+        flex-direction: row;
+        justify-content: space-around;
+
+
+
+
+    } 
+
 }
     
 
@@ -202,6 +219,8 @@ h1 {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        background-color: #2FF3E0;
+        
         
         
         @include mixins.desctop {
@@ -216,35 +235,56 @@ h1 {
         
       }
 
+      .project {
+
+       background-color: #2FF3E0;
+        padding: 1em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        
+        
+
+
+      }
+
+      
+
       .screenshot {
 
         width: 15em;
         height: 15em;
+        box-shadow: 10px -10px 0  var.$secondarycolor;
+       
     
       }
         
       .link__proj {
-          text-decoration: none;
-          color: var.$secondarycolor;
+
+
+          
+          @include mixins.buttons;
+          //box-shadow: -3px 3px 0 rgba(0, 0, 0, 0.6);
+          padding: 0.5em;
+          box-shadow:inset 4px -8px 0  rgba(0,0,0,.2);
+          background-color: var.$secondarycolor;
+          border-radius: 4px;
+
 
           
           
       }
       
 
-      .project {
-
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-
-      }
+    
 
 
       .desc {
         width: 15em;
-        background-color: chartreuse;
+        
+        margin-top: 1em;
       }
 
 
