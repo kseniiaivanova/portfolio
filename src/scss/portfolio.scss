@@ -268,9 +268,14 @@ h1 {
           @include mixins.buttons;
           //box-shadow: -3px 3px 0 rgba(0, 0, 0, 0.6);
           padding: 0.5em;
-          box-shadow:inset 4px -8px 0  rgba(0,0,0,.2);
+         
           background-color: var.$secondarycolor;
-          border-radius: 4px;
+          
+
+          &:hover{
+            background-color: var.$tertiarycolor;
+            color:#000;;
+          }
 
 
           

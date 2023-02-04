@@ -45,6 +45,11 @@ footer {
     color: var.$primarycolor;
     cursor: pointer;
 
+    &:hover {
+
+        text-decoration: underline;
+    }
+
 }
 
 };
