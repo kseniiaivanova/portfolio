@@ -3,3 +3,8 @@ export interface IRepo {
   name: string;
   description: string;
 }
+
+export interface Image {
+  name: string;
+  src: string;
+}
