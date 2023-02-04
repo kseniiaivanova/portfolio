@@ -139,7 +139,21 @@ h1 {
     flex-direction: column;
     height: 50vh;
     width: 100%;
-   
+
+    
+    .cont {
+        color: var.$primarycolor;
+        &:hover{
+
+            color: var.$secondarycolor;
+        }
+
+    }
+
+    
+    .pabout {
+        width: 70%;
+    }
    
     
 
@@ -243,6 +257,7 @@ h1 {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        margin-top: 3em;
         
         
         
