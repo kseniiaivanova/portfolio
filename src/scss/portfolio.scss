@@ -153,10 +153,10 @@ h1 {
    
     
     .cont {
-        color: var.$primarycolor;
+        color: var.$secondarycolor;
         &:hover{
 
-            color: var.$secondarycolor;
+            color: var.$tertiarycolor;
         }
 
     }
