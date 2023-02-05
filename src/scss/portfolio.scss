@@ -94,7 +94,7 @@ h1 {
     text-transform: uppercase;
     font-size: 4em;
     font-weight: 700;
-    color: var.$secondarycolor;
+    color: rgb(64, 8, 110);
     overflow: hidden; 
     border-right: .15em solid var.$tertiarycolor; 
     margin: 0 auto; 
@@ -108,7 +108,7 @@ h1 {
     
     @include mixins.desctop {
         overflow: hidden; 
-        border-right: .15em solid var.$tertiarycolor; 
+        border-right: .15em solid var.$secondarycolor; 
         margin: 0 auto; 
         letter-spacing: .05em; 
         margin-bottom: 0.5em;
@@ -127,7 +127,7 @@ h1 {
   
   @keyframes blink-caret {
     from, to { border-color: transparent }
-    50% { border-color: var.$tertiarycolor; }
+    50% { border-color: var.$secondarycolor; }
   }
 
 
@@ -153,10 +153,10 @@ h1 {
    
     
     .cont {
-        color: var.$secondarycolor;
+        color: var.$primarycolor;
         &:hover{
 
-            color: var.$tertiarycolor;
+            color: var.$secondarycolor;
         }
 
     }
