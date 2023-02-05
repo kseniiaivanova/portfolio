@@ -29,18 +29,22 @@ function createHTML(repos: IRepo[]) {
     let images: Image[] = [
       {
         src: "https://www.dropbox.com/s/n5tcli390gel661/dice.png?raw=1",
+        alt: "dice game",
       },
 
       {
         src: "https://www.dropbox.com/s/kab9iaga7lff94v/webshop.png?raw=1",
+        alt: "webshop",
       },
 
       {
         src: "https://www.dropbox.com/s/bjxml3bw12rx4jw/memory.png?raw=1",
+        alt: "memory game",
       },
 
       {
         src: "https://www.dropbox.com/s/4tcsnz35e6s2jgx/todo.png?raw=1",
+        alt: "todo app",
       },
     ];
 
@@ -49,6 +53,7 @@ function createHTML(repos: IRepo[]) {
 
     let screenshot: HTMLImageElement = document.createElement("img");
     screenshot.setAttribute("src", images[i].src);
+    screenshot.setAttribute("alt", images[i].alt);
     screenshot.classList.add("screenshot");
 
     let projectDesc: HTMLParagraphElement = document.createElement("p");

@@ -1,8 +1,3 @@
-/* export interface Image {
-  src: string;
-}
- */
-
 export class Image {
-  constructor(public src: string) {}
+  constructor(public src: string, public alt: string) {}
 }
