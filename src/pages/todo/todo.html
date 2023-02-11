@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToDo</title>
+    <link rel="stylesheet" href="../todo/main.scss" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+    />
+
+    <script src="../todo/js/main.js" defer type="module"></script>
+  </head>
+  <body>
+    <header>
+      <i class="bi bi-check2-square"></i>
+
+      <h1>Todo list</h1>
+    </header>
+    <div class="back">
+      <form>
+        <input
+          id="myinput"
+          class="usinput"
+          type="text"
+          placeholder="New Todo"
+        />
+        <button class="inputbtn" id="mybtn">Add</button>
+      </form>
+      <section>
+        <ul id="myList" class="list"></ul>
+      </section>
+      <button class="clearbtn" id="deleteAll">Clear all</button>
+    </div>
+  </body>
+</html>

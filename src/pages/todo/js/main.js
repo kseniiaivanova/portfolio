@@ -36,10 +36,10 @@ addButton.addEventListener("click", function () {
 });
 
 //skapa header
-let container = document.getElementById("head");
+/* let container = document.getElementById("head");
 let header = document.createElement("h1");
 header.innerText = "CheckIt ToDo list";
-container.appendChild(header);
+container.appendChild(header); */
 
 function displayTodos() {
   let myList = document.getElementById("myList");
@@ -100,3 +100,11 @@ function getListFromStorage() {
   }
   displayTodos();
 }
+
+function clearAll() {
+  localStorage.clear();
+  window.location.reload();
+}
+
+let deleteAllBtn = document.getElementById("deleteAll");
+deleteAllBtn.addEventListener("click", clearAll);

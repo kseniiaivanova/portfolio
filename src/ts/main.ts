@@ -16,8 +16,7 @@ function createHTML(repos: IRepo[]) {
     if (
       repos[i].name == "To-do-list" ||
       repos[i].name == "HolidayTree" ||
-      repos[i].name == "memory-game" ||
-      repos[i].name == "Dice-Game"
+      repos[i].name == "memory-old"
     ) {
       chosenRepos.push(repos[i]);
     }
@@ -29,11 +28,6 @@ function createHTML(repos: IRepo[]) {
     ) as HTMLDivElement;
 
     let images: Image[] = [
-      {
-        src: "https://www.dropbox.com/s/n5tcli390gel661/dice.png?raw=1",
-        alt: "dice game",
-      },
-
       {
         src: "https://www.dropbox.com/s/kab9iaga7lff94v/webshop.png?raw=1",
         alt: "webshop",
@@ -51,17 +45,13 @@ function createHTML(repos: IRepo[]) {
     ];
 
     let imgLinks: Link[] = [
-      {
-        href: "https://www.npmjs.com/package/parcel-reporter-static-files-copy",
-      },
-
-      { href: "../pages/webshop/index.html" },
+      { href: "../pages/webshop/webshop.html" },
 
       {
-        href: "https://www.npmjs.com/package/parcel-reporter-static-files-copy",
+        href: "https://memoryspel.netlify.app/",
       },
 
-      { href: "../pages/todo/index.html" },
+      { href: "../pages/todo/todo.html" },
     ];
 
     let project: HTMLDivElement = document.createElement("div");
