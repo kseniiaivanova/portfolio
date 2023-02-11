@@ -1,5 +1,7 @@
 import { IRepo } from "./models/IRepo";
 
+import { Link } from "./models/Link";
+
 import { Image } from "./models/Image";
 import { getRepos } from "./service/getRepos";
 
@@ -48,6 +50,20 @@ function createHTML(repos: IRepo[]) {
       },
     ];
 
+    let imgLinks: Link[] = [
+      {
+        href: "https://www.npmjs.com/package/parcel-reporter-static-files-copy",
+      },
+
+      { href: "../pages/webshop/index.html" },
+
+      {
+        href: "https://www.npmjs.com/package/parcel-reporter-static-files-copy",
+      },
+
+      { href: "../pages/todo/index.html" },
+    ];
+
     let project: HTMLDivElement = document.createElement("div");
     project.classList.add("project");
 
@@ -67,7 +83,13 @@ function createHTML(repos: IRepo[]) {
 
     projLink.innerHTML = "GitHub";
     projLink.className = "link__proj";
-    project.appendChild(screenshot);
+
+    let screenLink: HTMLAnchorElement = document.createElement("a");
+    screenLink.setAttribute("target", "_blank");
+    screenLink.href = imgLinks[i].href;
+
+    project.appendChild(screenLink);
+    screenLink.appendChild(screenshot);
 
     project.appendChild(projectDesc);
     project.appendChild(projLink);

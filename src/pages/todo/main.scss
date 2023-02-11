@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=Titillium+Web:wght@700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Titillium Web', sans-serif;
+    background-color: rgb(183, 209, 238);
+    
+    display: flex;
+    justify-items: center;
+    height: 100vh;
+    
+}
+
+.back {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+   
+}
+
+.wrapper {
+    
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    margin: auto;
+    padding: 2em;
+    background-color: rgb(243, 199, 243);
+    border: rgb(60, 4, 80) solid 0.2em;
+    
+    
+}
+
+h1 {
+    color: rgb(60, 4, 80);
+    padding: 0.5em;
+}
+
+header {
+    display:flex;
+    
+    justify-content: space-between;
+    
+} 
+
+.usinput {
+    height: 3em;
+    margin-bottom: 2em;
+    
+    &:focus {
+        cursor: pointer;
+        background: rgb(215, 172, 247);
+         outline: none;
+        
+    }
+        
+}
+
+
+.inputbtn {
+    
+    height: 2.5em;
+    width: 2.5em;
+    background: rgb(155, 58, 229);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;
+    border: none;
+    color: white;
+
+    &:hover {
+        cursor: pointer;
+        background: rgb(79, 16, 134);
+    }
+        
+        
+    
+}
+
+
+
+
+.list {
+    box-shadow: 0 0 3em rgba(0, 0, 0, 0.4);
+
+    & li {
+
+    padding: 1em;
+    background-color: whitesmoke;
+    list-style: none;
+    border-bottom: 0.1em solid rgba(0, 0, 0, 0.2);
+    display: flex;
+    }
+}
+
+
+.cbox {
+    cursor: pointer;
+}
+
+.checked {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.myspan {
+    margin: 1em;
+}

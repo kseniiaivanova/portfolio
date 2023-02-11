@@ -4,7 +4,3 @@ export interface IRepo {
   description: string;
 }
 
-export interface Image {
-  name: string;
-  src: string;
-}

@@ -24,10 +24,12 @@ body {
 }
 
 .navbar {
+
    
 position: fixed;
 top: 0;
 width: 100%;
+z-index: 99;
     
 
 }
@@ -302,7 +304,7 @@ h1 {
 
           
           @include mixins.buttons;
-          //box-shadow: -3px 3px 0 rgba(0, 0, 0, 0.6);
+         
           padding: 0.5em;
          
           background-color: var.$secondarycolor;
