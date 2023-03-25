@@ -1,40 +1,41 @@
 @use "variables" as var;
 
 @mixin desctop {
-    @media screen and (min-width: 1100px) {
-      @content;
-    }
+  @media screen and (min-width: 1100px) {
+    @content;
   }
+}
 
-  @mixin tablet {
-    @media screen and (min-width: 768px) {
-      @content;
-    }
+@mixin tablet {
+  @media screen and (min-width: 768px) {
+    @content;
   }
-  
+}
+
 
 @mixin buttons {
-   
-    
-
-    text-decoration: none;
-      color: var.$primarycolor; 
-      outline:0; 
-      font-size:1em;
-      font-weight:600;
-      background: var.$tertiarycolor;
-      
-      padding:2em 4em;
-      border: 1px solid #000;
-
-       
-    
-    &:hover{
-      background-color: var.$secondarycolor;
-      color:#000;;
-    }
-
-    
 
 
+
+  text-decoration: none;
+  color: var.$primarycolor;
+  outline: 0;
+  font-size: 1em;
+  font-weight: 600;
+  background: var.$tertiarycolor;
+
+  border: 1px solid #000;
+  cursor: pointer;
+
+
+
+  &:hover {
+    background-color: var.$secondarycolor;
+    color: #000;
+    ;
   }
+
+
+
+
+}

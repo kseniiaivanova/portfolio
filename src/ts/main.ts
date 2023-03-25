@@ -4,6 +4,7 @@ import { Link } from "./models/Link";
 
 import { Image } from "./models/Image";
 import { getRepos } from "./service/getRepos";
+import axios from "axios";
 
 getRepos().then((repos) => {
   createHTML(repos);
@@ -48,7 +49,7 @@ function createHTML(repos: IRepo[]) {
       { href: "../pages/webshop/webshop.html" },
 
       {
-        href: "https://memoryspel.netlify.app/",
+        href: "https://memory-game-moz.netlify.app",
       },
 
       { href: "../pages/todo/todo.html" },
@@ -59,7 +60,7 @@ function createHTML(repos: IRepo[]) {
 
     let screenshot: HTMLImageElement = document.createElement("img");
     screenshot.setAttribute("src", images[i].src);
-    screenshot.setAttribute("alt", images[i].alt);
+    screenshot.setAttribute("alt", "programmets bild");
     screenshot.classList.add("screenshot");
 
     let projectDesc: HTMLParagraphElement = document.createElement("p");
