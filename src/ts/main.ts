@@ -1,89 +1,119 @@
-import { IRepo } from "./models/IRepo";
-
-import { Link } from "./models/Link";
-
-import { Image } from "./models/Image";
+import type { IRepo } from "./models/IRepo";
+import type { Link } from "./models/Link";
+import type { Image } from "./models/Image";
 import { getRepos } from "./service/getRepos";
-import axios from "axios";
 
-getRepos().then((repos) => {
-  createHTML(repos);
-});
+getRepos()
+  .then((repos) => {
+    createHTML(repos);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
 
-//första loop
-function createHTML(repos: IRepo[]) {
-  let chosenRepos: IRepo[] = [];
-  for (let i: number = 0; i < repos.length; i++) {
+function createProjectDiv(): HTMLDivElement {
+  const projectDiv: HTMLDivElement = document.createElement("div");
+  projectDiv.classList.add("project");
+  return projectDiv;
+}
+
+function createProjectDesc(): HTMLParagraphElement {
+  const projectDesc: HTMLParagraphElement = document.createElement("p");
+  projectDesc.classList.add("desc");
+  return projectDesc;
+}
+
+function pickRepos(repos: IRepo[]): IRepo[] {
+  const chosenRepos: IRepo[] = [];
+  for (let i = 0; i < repos.length; i++) {
     if (
-      repos[i].name == "To-do-list" ||
-      repos[i].name == "HolidayTree" ||
-      repos[i].name == "memory-old"
+      repos[i].name === "To-do-list" ||
+      repos[i].name === "HolidayTree" ||
+      repos[i].name === "memory-old"
     ) {
       chosenRepos.push(repos[i]);
     }
   }
 
-  for (let i: number = 0; i < chosenRepos.length; i++) {
-    let projCont: HTMLDivElement = document.getElementById(
-      "projects"
-    ) as HTMLDivElement;
+  return chosenRepos;
+}
 
-    let images: Image[] = [
-      {
+function createGithubLink(repo: IRepo): HTMLAnchorElement {
+  const gitHUbLink: HTMLAnchorElement = document.createElement("a");
+  gitHUbLink.target = "_blank";
+  gitHUbLink.innerHTML = "GitHub";
+  gitHUbLink.className = "link__proj";
+  gitHUbLink.href = repo.html_url;
+
+  return gitHUbLink;
+}
+
+function createScreenshot(image: Image): HTMLImageElement {
+  const screenshot: HTMLImageElement = document.createElement("img");
+  screenshot.setAttribute("src", image.src);
+  screenshot.setAttribute("alt", "screenshot");
+  screenshot.classList.add("screenshot");
+  return screenshot;
+}
+
+function createProjectLink(imgLink: Link): HTMLAnchorElement {
+  const projectLink: HTMLAnchorElement = document.createElement("a");
+  projectLink.setAttribute("target", "_blank");
+  projectLink.href = imgLink.href;
+  return projectLink;
+}
+
+function createHTML(repos: IRepo[]): void {
+  const chosenRepos = pickRepos(repos);
+
+  const projects = [
+    {
+      repo: chosenRepos[0],
+      image: {
         src: "https://www.dropbox.com/s/kab9iaga7lff94v/webshop.png?raw=1",
         alt: "webshop",
+        href: "../pages/webshop/webshop.html",
       },
+    },
 
-      {
+    {
+      repo: chosenRepos[1],
+      image: {
         src: "https://www.dropbox.com/s/bjxml3bw12rx4jw/memory.png?raw=1",
         alt: "memory game",
-      },
-
-      {
-        src: "https://www.dropbox.com/s/4tcsnz35e6s2jgx/todo.png?raw=1",
-        alt: "todo app",
-      },
-    ];
-
-    let imgLinks: Link[] = [
-      { href: "../pages/webshop/webshop.html" },
-
-      {
         href: "https://memory-game-moz.netlify.app",
       },
+    },
 
-      { href: "../pages/todo/todo.html" },
-    ];
+    {
+      repo: chosenRepos[2],
+      image: {
+        src: "https://www.dropbox.com/s/4tcsnz35e6s2jgx/todo.png?raw=1",
+        alt: "todo app",
+        href: "../pages/todo/todo.html",
+      },
+    },
+  ];
 
-    let project: HTMLDivElement = document.createElement("div");
-    project.classList.add("project");
+  const projCont: HTMLDivElement = document.getElementById(
+    "projects"
+  ) as HTMLDivElement;
 
-    let screenshot: HTMLImageElement = document.createElement("img");
-    screenshot.setAttribute("src", images[i].src);
-    screenshot.setAttribute("alt", "programmets bild");
-    screenshot.classList.add("screenshot");
+  for (let i = 0; i < projects.length; i++) {
+    const projectDiv = createProjectDiv();
 
-    let projectDesc: HTMLParagraphElement = document.createElement("p");
-    projectDesc.classList.add("desc");
+    const screenshot = createScreenshot(projects[i].image);
 
-    let projLink: HTMLAnchorElement = document.createElement("a");
-    projLink.href = chosenRepos[i].html_url;
-    projLink.target = "_blank";
+    const projectLink = createProjectLink(projects[i].image);
+    projectDiv.appendChild(projectLink);
+    projectLink.appendChild(screenshot);
 
+    const projectDesc = createProjectDesc();
     projectDesc.innerHTML = chosenRepos[i].description;
+    projectDiv.appendChild(projectDesc);
 
-    projLink.innerHTML = "GitHub";
-    projLink.className = "link__proj";
-
-    let screenLink: HTMLAnchorElement = document.createElement("a");
-    screenLink.setAttribute("target", "_blank");
-    screenLink.href = imgLinks[i].href;
-
-    project.appendChild(screenLink);
-    screenLink.appendChild(screenshot);
-
-    project.appendChild(projectDesc);
-    project.appendChild(projLink);
-    projCont.appendChild(project);
+    const gitHubLink = createGithubLink(chosenRepos[i]);
+    projectDiv.appendChild(gitHubLink);
+    projCont.appendChild(projectDiv);
   }
 }

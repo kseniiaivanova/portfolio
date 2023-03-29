@@ -1,15 +1,11 @@
 import axios from "axios";
 
-import { IRepo } from "../models/IRepo";
+import type { IRepo } from "../models/IRepo";
 
-export function getRepos(): Promise<IRepo[]> {
-  return  axios.get("https://api.github.com/users/kseniiaivanova/repos")
-  .then((response)=>{
-  //lista med object IRepo[]
+export async function getRepos(): Promise<IRepo[]> {
+  const response = await axios.get(
+    "https://api.github.com/users/kseniiaivanova/repos"
+  );
   console.log(response.data);
-  return response.data;
- 
-  
-    
-});
+  return response.data as IRepo[];
 }
