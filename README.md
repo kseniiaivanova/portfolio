@@ -1,6 +1,8 @@
 # Portfolio
 
-Project with TypeScript and SCSS.
+Some more information about me and my skills. You can download my resume, look at my other projects or send me an email. 
+
+## Live: https://ixenia.me/
 
 ## Demo
  <img src="https://www.dropbox.com/s/iso34pith1196kg/ezgif.com-video-to-gif%281%29.gif?raw=1"/>
