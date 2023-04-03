@@ -72,7 +72,7 @@ function createHTML(repos: IRepo[]): void {
       image: {
         src: "https://www.dropbox.com/s/kab9iaga7lff94v/webshop.png?raw=1",
         alt: "webshop",
-        href: "../pages/webshop/webshop.html",
+        href: "https://kseniiaivanova.github.io/HolidayTree/",
       },
     },
 
