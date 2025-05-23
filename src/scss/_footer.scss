@@ -2,54 +2,43 @@
 @use "variables" as var;
 
 footer {
-    background-color: var.$secondarycolor; 
-    
+    background-color: var.$secondarycolor;
 
-
-.footcont {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 0.1em solid rgba(0, 0, 0, 0.3);
-    
-    @include mixins.desctop {
+    .footcont {
         display: flex;
-        flex-direction: row;
-    }
-}
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 0.1em solid rgba(0, 0, 0, 0.3);
 
-
-
-.social i {
-    font-size: 2em;
-    color: var.$primarycolor;
-}
-
-
-
-.copy {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-    
-}
-
-.copy h6 {
-    font-style: italic;
-}
-
-.copy a {
-    text-decoration: none;
-    color: var.$primarycolor;
-    cursor: pointer;
-
-    &:hover {
-
-        text-decoration: underline;
+        @include mixins.desctop {
+            display: flex;
+            flex-direction: row;
+        }
     }
 
-}
+    .social i {
+        font-size: 2em;
+        color: var.$primarycolor;
+    }
 
-};
+    .copy {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        h6 {
+            font-style: italic;
+        }
+
+        a {
+            text-decoration: none;
+            color: var.$primarycolor;
+            cursor: pointer;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
