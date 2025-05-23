@@ -1,64 +1,50 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Roboto:wght@500&family=Titillium+Web:wght@700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-
 body {
     font-family: 'Montserrat', sans-serif;
     background-color: rgb(246, 243, 243);
-    
     display: flex;
     flex-direction: column;
     justify-items: center;
     height: 100vh;
-    
 }
 
 header {
-    
     width: 100%;
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
-    
     background-color: rgb(183, 209, 238);
 
-
-    
     h1 {
-
-        font-size: 3em;
-        color: rgb(20, 4, 80);
-    padding: 0.5em;
-
-    }
-
-   i {
         font-size: 3em;
         color: rgb(20, 4, 80);
         padding: 0.5em;
-
     }
 
-    
+    i {
+        font-size: 3em;
+        color: rgb(20, 4, 80);
+        padding: 0.5em;
+    }
 }
 
-
- .back {
+.back {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
     justify-content: space-between;
-   
 }
 
 .wrapper {
-    
     display: flex;
     flex-direction: column;
     justify-items: center;
@@ -66,52 +52,34 @@ header {
     margin: auto;
     padding: 2em;
     background-color: white;
-   
-    
-    
 }
 
-
-    
-
 form {
-    display:flex;
-    
+    display: flex;
     justify-content: space-between;
-    
-    
-    
-} 
+}
 
 .usinput {
     height: 50px;
     margin-bottom: 2em;
-    border: 2px solid  rgba(0, 0, 0, 0.2);
+    border: 2px solid rgba(0, 0, 0, 0.2);
     font-family: "Montserrat";
     font-size: 1.2em;
-    
 
-    
     &:focus {
         cursor: pointer;
         background: rgb(211, 217, 251);
-         outline: none;
-        
+        outline: none;
     }
-        
 }
 
-
 .inputbtn {
-    
     height: 50px;
     width: 50px;
-    
     background: rgb(42, 9, 161);
     display: flex;
     justify-content: center;
     align-items: center;
-   
     border: none;
     color: white;
     font-size: 1.2em;
@@ -120,40 +88,22 @@ form {
         cursor: pointer;
         background: rgb(80, 33, 247);
     }
-        
-        
-    
 }
-
-
-
 
 .list {
-
-    
-   
-
-     li {
-
-    padding: 1em;
-    background-color: rgb(255, 253, 253);
-    list-style: none;
-    border: 0.1em solid rgba(0, 0, 0, 0.2);
-    border-bottom: none ;
-    
-    display: flex;
+    li {
+        padding: 1em;
+        background-color: rgb(255, 253, 253);
+        list-style: none;
+        border: 0.1em solid rgba(0, 0, 0, 0.2);
+        border-bottom: none;
+        display: flex;
     }
-    
 
-    
     li:last-child {
-
-        border-bottom: 0.1em solid rgba(0, 0, 0, 0.2);;
-
-
+        border-bottom: 0.1em solid rgba(0, 0, 0, 0.2);
     }
 }
-
 
 .cbox {
     cursor: pointer;
@@ -169,24 +119,20 @@ form {
 }
 
 .clearbtn {
-
     height: 50px;
     width: 100px;
-    
     background: rgb(42, 9, 161);
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 3em;
+    font-size: 1.5em;
     border: none;
     color: white;
-    font-size: 1.5em;
-    border-radius: 15;
+    border-radius: 15px;
     margin-top: 1em;
 
     &:hover {
         cursor: pointer;
         background: rgb(80, 33, 247);
     }
-
 }

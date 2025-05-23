@@ -12,30 +12,18 @@
   }
 }
 
-
 @mixin buttons {
-
-
-
   text-decoration: none;
   color: var.$primarycolor;
   outline: 0;
   font-size: 1em;
   font-weight: 600;
   background: var.$tertiarycolor;
-
   border: 1px solid #000;
   cursor: pointer;
-
-
 
   &:hover {
     background-color: var.$secondarycolor;
     color: #000;
-    ;
   }
-
-
-
-
 }
